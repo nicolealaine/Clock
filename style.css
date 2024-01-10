@@ -1,0 +1,186 @@
+  [class="dark"] {
+      --fgColor: rgb(220, 223, 247);
+      --fgBorder: rgb(25, 28, 53);
+      --fgInset: rgb(76, 77, 85);
+      --fgFace: rgba(51, 51, 51, 0.696);
+      --bgImage: url(Space-Background.jpg);
+      --toggleButton: black;
+  }
+
+  [class="light"] {
+      --fgColor: rgb(45, 45, 46);
+      --fgBorder: rgb(200, 221, 231);
+      --fgInset: rgb(150, 156, 196);
+      --fgFace: rgba(204, 199, 199, 0.383);
+      --bgImage: url(clouds.jpg);
+      --toggleButton: white;
+  }
+
+
+
+  html {
+      background: var(--bgImage);
+      background-size: cover;
+      font-family: 'helvetica neue';
+      text-align: center;
+      font-size: 10px;
+  }
+
+  body {
+      background: var(--bgImage);
+      margin: 0;
+      font-size: 2rem;
+      display: flex;
+      flex: 1;
+      min-height: 100vh;
+      align-items: center;
+      transition: all 0.5s ease-in-out;
+  }
+
+  .clock {
+      background-color: var(--fgFace);
+      width: 30rem;
+      height: 30rem;
+      border: 20px solid var(--fgBorder);
+      border-radius: 50%;
+      margin: 50px auto;
+      position: relative;
+      padding: 2rem;
+      box-shadow:
+          0 0 0 4px rgba(0, 0, 0, 0.1),
+          inset 0 0 0 3px var(--fgInset),
+          inset 0 0 10px black,
+          0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .clock-face {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-3px);
+      /* account for the height of the clock hands */
+  }
+
+  .hand {
+      width: 50%;
+      height: 5px;
+      background: var(--fgColor);
+      position: absolute;
+      border-radius: 40%;
+      top: 50%;
+      transform-origin: 90%;
+  }
+
+  .hour-hand {
+      width: 9rem;
+      height: 7px;
+      transform: translateX(6.9rem) rotate(90deg)
+  }
+
+  .min-hand {
+      width: 12rem;
+      transform: translateX(4.2rem) rotate(90deg)
+  }
+
+  .second-hand {
+      width: 15rem;
+      height: 3px;
+      transform: translateX(1.5rem) rotate(90deg)
+  }
+
+  .clock-nums {
+      width: 30rem;
+      height: 30rem;
+      position: absolute;
+      font-size: 3rem;
+      color: var(--fgColor);
+  }
+
+  .clock-num {
+      position: absolute;
+      font-family: 'Lobster', sans-serif;
+  }
+
+  .deg0 {
+      /* 12 oclock */
+      transform: translateX(13.5rem) translateY(-4rem)
+  }
+
+  .deg30 {
+      /* 1 oclock */
+      transform: translateX(22rem) translateY(-2rem);
+
+  }
+
+  .deg60 {
+      /* 2 oclock */
+      transform: translateX(27rem) translateY(3rem);
+  }
+
+  .deg90 {
+      /* 3 oclock */
+      transform: translateX(29rem) translateY(10rem);
+  }
+
+  .deg120 {
+      /* 4 oclock */
+      transform: translateX(27rem) translateY(17rem);
+  }
+
+  .deg150 {
+      /* 5 oclock */
+      transform: translateX(22rem) translateY(22rem);
+  }
+
+  .deg180 {
+      /* 6 oclock */
+      transform: translateX(14rem) translateY(24rem);
+  }
+
+  .deg210 {
+      /* 7 oclock */
+      transform: translateX(7rem) translateY(22rem);
+  }
+
+  .deg240 {
+      /* 8 oclock */
+      transform: translateX(2rem) translateY(17rem);
+  }
+
+  .deg270 {
+      /* 9 oclock */
+      transform: translateX(0rem) translateY(10rem);
+  }
+
+  .deg300 {
+      /* 10 oclock */
+      transform: translateX(2rem) translateY(3rem);
+  }
+
+  .deg330 {
+      /* 11 oclock */
+      transform: translateX(7rem) translateY(-2rem);
+  }
+
+  .day-night-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 80px;
+      height: 30px;
+      padding: 2px 5px;
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      border-radius: 2rem;
+      background-color: rgba(128, 128, 128, 0.4);
+      transition: all 0.5s ease-in-out;
+  }
+
+  .day-night-button {
+      align-self: flex-start;
+      height: 30px;
+      width: 30px;
+      border-radius: 2rem;
+      background: var(--fgBorder);
+      transition: all 0.5s ease-in-out;
+  }
