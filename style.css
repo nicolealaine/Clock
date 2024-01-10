@@ -16,12 +16,14 @@
       --toggleButton: white;
   }
 
-
-
   html {
       font-family: 'helvetica neue';
       text-align: center;
-      font-size: 10px;
+      font-size: 8px;
+
+      @media only screen and (min-width: 750px) {
+          font-size: 10px;
+      }
   }
 
   body {
@@ -174,6 +176,7 @@
       border-radius: 2rem;
       background-color: rgba(128, 128, 128, 0.4);
       transition: all 0.5s ease-in-out;
+
   }
 
   .day-night-button {
