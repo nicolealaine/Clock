@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const minHand = document.querySelector(".min-hand");
   const hourHand = document.querySelector(".hour-hand");
 
-  const bodyTheme = document.querySelector("body");
+  const bodyTheme = document.querySelector("main");
   const themeButtonWrapper = document.querySelector(".day-night-wrapper");
   const themeImage = document.querySelector(".day-night-image");
   const themeButton = document.querySelector(".day-night-button");
